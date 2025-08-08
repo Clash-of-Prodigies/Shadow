@@ -7,7 +7,7 @@ import datetime
 app = Flask(__name__)
 CORS(app)
 
-file_path = os.path.join("server", "data.json")
+file_path = os.path.join("Shadow", "data.json")
 with open(file_path, "r") as f: data: dict = json.load(f)
 
 @app.route("/data")
