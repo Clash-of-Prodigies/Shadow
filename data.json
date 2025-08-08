@@ -1,0 +1,165 @@
+{"user": {"id": 12345678900, "name": "Oracle", "avatar": "Jake", "team": "The Aesir", "bio": "For Fortune and Glory...", "song": "Faded", "playlist": "lord odin", "theme": "light", "destinations": [7, 459], "trophies": [7, 446], "achievements": [3, 27], "titles": [21, 81], "accolades": ["Award", "Target", "Skateboard", "Pencil", "Upload"]}, "news": [{"id": 1, "title": "Floor is Lava", "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "imageUrl": "http://localhost:5000/media/dark.png", "icon": "News", "timeLeft": "7d 17h", "unread": true}, {"id": 2, "title": "Plant Invasion", "icon": "News", "timeLeft": "3d 17h", "unread": true}, {"id": 3, "title": "Season Challenge", "icon": "News", "timeLeft": "2d 17h", "unread": true}, {"id": 4, "title": "Season Hunt Rewards", "icon": "News", "timeLeft": "7d 17h", "unread": true}, {"id": 5, "title": "Welcome!", "icon": "News", "timeLeft": "4d 17h", "unread": false}, {"id": 6, "title": "Welcome!", "icon": "Gift", "timeLeft": "4d 17h", "unread": false}],
+"calendar": {"1": [{"day": 7, "label": "278", "icon": "Box"}, {"day": 10, "label": "403", "icon": "Robo"}, {"day": 11, "label": "4", "icon": "Kin"}, {"day": 13, "label": "1", "icon": "Alien"}, {"day": 26, "label": "5", "icon": "Flame"}], "2": [{"day": 12, "label": "1", "icon": "Flame"}, {"day": 13, "label": "678", "icon": "News"}, {"day": 14, "label": "3", "icon": "Frank"}, {"day": 17, "label": "Gold", "icon": "Alien"}, {"day": 18, "label": "Bronze", "icon": "Key"}], "3": [{"day": 8, "label": "103", "icon": "Fresh"}, {"day": 14, "label": "149", "icon": "Skateboard"}, {"day": 20, "label": "Bronze", "icon": "Gift"}, {"day": 25, "label": "Silver", "icon": "Lock"}, {"day": 28, "label": "5", "icon": "Target"}], "4": [{"day": 11, "label": "1", "icon": "Frank"}, {"day": 14, "label": "72", "icon": "Tagbot"}, {"day": 18, "label": "Silver", "icon": "Alie"}, {"day": 21, "label": "Silver", "icon": "Tagbo"}, {"day": 22, "label": "373", "icon": "Fran"}], "5": [{"day": 8, "label": "1", "icon": "Flame"}, {"day": 19, "label": "161", "icon": "Gift"}, {"day": 22, "label": "1", "icon": "News"}, {"day": 26, "label": "Bronze", "icon": "Tricky"}, {"day": 27, "label": "3", "icon": "Fran"}], "6": [{"day": 6, "label": "Gold", "icon": "Award"}, {"day": 15, "label": "Silver", "icon": "Frank"}, {"day": 17, "label": "Silver", "icon": "Zoe"}, {"day": 19, "label": "917", "icon": "Alien"}, {"day": 21, "label": "Silver", "icon": "Locked"}], "7": [{"day": 4, "label": "1", "icon": "News"}, {"day": 7, "label": "Silver", "icon": "Upload"}, {"day": 8, "label": "655", "icon": "Rob"}, {"day": 14, "label": "235", "icon": "Coin"}, {"day": 25, "label": "500", "icon": "Fran"}], "8": [{"day": 2, "label": "499", "icon": "Skateboard"}, {"day": 5, "label": "133", "icon": "Jack"}, {"day": 16, "label": "829", "icon": "News"}, {"day": 18, "label": "846", "icon": "Box"}, {"day": 28, "label": "Silver", "icon": "Yutani"}], "9": [{"day": 4, "label": "4", "icon": "Lucia"}, {"day": 8, "label": "699", "icon": "Tagbo"}, {"day": 10, "label": "5", "icon": "Alien"}, {"day": 27, "label": "Gold", "icon": "Skateboard"}, {"day": 28, "label": "Silver", "icon": "Gift"}], "10": [{"day": 1, "label": "4", "icon": "Tagbot"}, {"day": 6, "label": "4", "icon": "Target"}, {"day": 11, "label": "248", "icon": "Lucia"}, {"day": 12, "label": "458", "icon": "Coin"}, {"day": 22, "label": "Silver", "icon": "Upload"}], "11": [{"day": 13, "label": "1", "icon": "Skateboard"}, {"day": 15, "label": "Bronze", "icon": "Coin"}, {"day": 24, "label": "3", "icon": "Luci"}, {"day": 25, "label": "390", "icon": "Target"}, {"day": 28, "label": "Silver", "icon": "Rob"}], "12": [{"day": 5, "label": "1", "icon": "News"}, {"day": 9, "label": "3", "icon": "Award"}, {"day": 13, "label": "4", "icon": "Gift"}, {"day": 17, "label": "Gold", "icon": "Fresh"}, {"day": 28, "label": "Bronze", "icon": "Frank"}]}, "avatars": [{"label": "Jake"}, {"label": "Tricky"}, {"label": "Robo"}, {"label": "Yutani"}, {"label": "Alien"}, {"label": "Tagbot"}, {"label": "Lucia"}, {"label": "Fresh"}, {"label": "Frank"}, {"label": "Zoe"}, {"label": "King"}, {"label": "Locked", "locked": true}, {"label": "Jack"}, {"label": "Trick"}, {"label": "Rob"}, {"label": "Yutan"}, {"label": "Alie"}, {"label": "Tagbo"}, {"label": "Luci"}, {"label": "Fres"}, {"label": "Fran"}, {"label": "Zo"}, {"label": "Kin"}, {"label": "Lock", "locked": true}], "playlists": {"default": ["A Song of Ice and Fire"], "lord odin": ["Faded", "The Spectre"], "funk": []},
+"events": {
+    "interhouse": [
+        {
+            "name": "World",
+            "icon": "World",
+            "format": "legacy",
+            "competitions": [
+                {
+                    "name": "Champions",
+                    "icon": "Swords",
+                    "type": "combined",
+                    "stages": [
+                        {
+                            "group": {
+                            }
+                        },
+                        {
+                            "knockout": {
+
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Europa",
+                    "icon": "Shield",
+                    "format": "legacy",
+                    "stages": [
+                        {
+                            "group": {
+
+                            }
+                        },
+                        {
+                            "knockout": {
+
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "houses": [
+        {
+            "name": "House of Weber",
+            "icon": "Award",
+            "lord": "Weber",
+            "format": "legacy",
+            "competitions": []
+        },
+        {
+            "name": "House of Odin",
+            "icon": "Gift",
+            "lord": "Odin",
+            "format": "legacy",
+            "competitions": [
+                {
+                    "name": "League A",
+                    "icon": "Ankh",
+                    "type": "league",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+                    "rankings": {
+                        "table": [
+  { "name": "WonderfulJack", "avatar": "🤖", "score": 10139516 },
+  { "name": "EclecticTutti", "avatar": "🧢", "score": 4488879 },
+  { "name": "HoveringFrutti", "avatar": "🎩", "score": 2726006 },
+  { "name": "ArtsyTeabot", "avatar": "😎", "score": 2624878 },
+  { "name": "DiamondMeggan", "avatar": "🤖", "score": 2481484 },
+  { "name": "DancingMing", "avatar": "👩‍🎤", "score": 2437787 },
+  { "name": "AirwalkNikos", "avatar": "💀", "score": 2306794 },
+  { "name": "LeapingMarco", "avatar": "🦘", "score": 2034732 },
+  { "name": "CruisingJaro", "avatar": "🎭", "score": 968837 },
+  { "name": "Oracle (Me)", "avatar": "🧙‍♀️", "score": 0 }
+                        ]
+                    },
+                    "matches": [
+  {
+    "home": { "name": "Real Madrid", "logo": "Swords", "theme": "blue" },
+    "away": { "name": "Juventus", "logo": "Shield", "theme": "grape" },
+    "datetime": "2025-08-07T12:15:00Z",
+    "round": "Gameweek 1",
+    "score": [],
+    "live": false,
+    "highlights": [
+      { "type": "goal", "name": "Mbappe", "time": "67" },
+      { "type": "Ycard", "name": "Bellingham", "time": "22" },
+      { "type": "Rcard", "name": "Ceballos", "time": "90" }
+    ]
+  },
+  {
+    "home": { "name": "Barcelona", "logo": "Rocket", "theme": "pink" },
+    "away": { "name": "Man City", "logo": "Ball", "theme": "cyan" },
+    "datetime": "2025-08-07T15:45:00Z",
+    "round": "Gameweek 1",
+    "score": [2, 3],
+    "live": false,
+    "highlights": [
+      { "type": "goal", "name": "Haaland", "time": "56" },
+      { "type": "goal", "name": "Foden", "time": "89" },
+      { "type": "goal", "name": "Lewandowski", "time": "22" }
+    ]
+  },
+  {
+    "home": { "name": "AC Milan", "logo": "Horse", "theme": "red" },
+    "away": { "name": "Inter", "logo": "Pulse", "theme": "indigo" },
+    "datetime": "2025-08-08T18:30:00Z",
+    "round": "Gameweek 1",
+    "score": [],
+    "live": true,
+    "highlights": [
+      { "type": "Ycard", "name": "Tonali", "time": "33" }
+    ]
+  },
+  {
+    "home": { "name": "Bayern", "logo": "Ghost", "theme": "orange" },
+    "away": { "name": "PSG", "logo": "Crown", "theme": "violet" },
+    "datetime": "2025-08-08T20:00:00Z",
+    "round": "Gameweek 1",
+    "score": [1, 1],
+    "live": false,
+    "highlights": [
+      { "type": "goal", "name": "Mane", "time": "17" },
+      { "type": "goal", "name": "Mbappe", "time": "64" }
+    ]
+  },
+  {
+    "home": { "name": "Chelsea", "logo": "Field", "theme": "blue" },
+    "away": { "name": "Arsenal", "logo": "Star", "theme": "red" },
+    "datetime": "2025-08-09T17:00:00Z",
+    "round": "Gameweek 1",
+    "score": [],
+    "live": false,
+    "highlights": []
+  }
+]
+
+                },
+                {
+                    "name": "League B"
+                },
+                {
+                    "name": "Cup"
+                }
+            ]
+        },
+        {
+            "name": "House of Bamzy",
+            "icon": "Star",
+            "lord": "Bamzy",
+            "format": "legacy",
+            "competitions": []
+        },
+        {
+            "name": "House of Nimot",
+            "icon": "Female",
+            "lord": "Nimot",
+            "format": "legacy",
+            "competitions": []
+        }
+    ]
+}
+}
