@@ -1,4 +1,4 @@
-{"user": {"id": 12345678900, "name": "Oracle", "avatar": "Jake", "team": "The Aesir", "bio": "For Fortune and Glory...", "song": "Faded", "playlist": "lord odin", "theme": "light", "destinations": [7, 459], "trophies": [7, 446], "achievements": [3, 27], "titles": [21, 81], "accolades": ["Award", "Target", "Skateboard", "Pencil", "Upload"]}, "news": [{"id": 1, "title": "Floor is Lava", "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "imageUrl": "http://localhost:5000/media/dark.png", "icon": "News", "timeLeft": "7d 17h", "unread": true}, {"id": 2, "title": "Plant Invasion", "icon": "News", "timeLeft": "3d 17h", "unread": true}, {"id": 3, "title": "Season Challenge", "icon": "News", "timeLeft": "2d 17h", "unread": true}, {"id": 4, "title": "Season Hunt Rewards", "icon": "News", "timeLeft": "7d 17h", "unread": true}, {"id": 5, "title": "Welcome!", "icon": "News", "timeLeft": "4d 17h", "unread": false}, {"id": 6, "title": "Welcome!", "icon": "Gift", "timeLeft": "4d 17h", "unread": false}],
+{"user": {"id": 12345678900, "name": "Oracle", "avatar": "Jake", "team": "The Aesir", "bio": "For Fortune and Glory...", "song": "Faded", "playlist": "lord odin", "theme": "light", "coins": 653278, "tickets": 75, "destinations": [7, 459], "trophies": [7, 446], "achievements": [3, 27], "titles": [21, 81], "accolades": ["Award", "Target", "Skateboard", "Pencil", "Upload"]}, "news": [{"id": 1, "title": "Floor is Lava", "description": "Lore ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "imageUrl": "http://localhost:5000/media/dark.png", "icon": "News", "timeLeft": "7d 17h", "unread": true}, {"id": 2, "title": "Plant Invasion", "icon": "News", "timeLeft": "3d 17h", "unread": true}, {"id": 3, "title": "Season Challenge", "icon": "News", "timeLeft": "2d 17h", "unread": true}, {"id": 4, "title": "Season Hunt Rewards", "icon": "News", "timeLeft": "7d 17h", "unread": true}, {"id": 5, "title": "Welcome!", "icon": "News", "timeLeft": "4d 17h", "unread": false}, {"id": 6, "title": "Welcome!", "icon": "Gift", "timeLeft": "4d 17h", "unread": false}],
 "calendar": {"1": [{"day": 7, "label": "278", "icon": "Box"}, {"day": 10, "label": "403", "icon": "Robo"}, {"day": 11, "label": "4", "icon": "Kin"}, {"day": 13, "label": "1", "icon": "Alien"}, {"day": 26, "label": "5", "icon": "Flame"}], "2": [{"day": 12, "label": "1", "icon": "Flame"}, {"day": 13, "label": "678", "icon": "News"}, {"day": 14, "label": "3", "icon": "Frank"}, {"day": 17, "label": "Gold", "icon": "Alien"}, {"day": 18, "label": "Bronze", "icon": "Key"}], "3": [{"day": 8, "label": "103", "icon": "Fresh"}, {"day": 14, "label": "149", "icon": "Skateboard"}, {"day": 20, "label": "Bronze", "icon": "Gift"}, {"day": 25, "label": "Silver", "icon": "Lock"}, {"day": 28, "label": "5", "icon": "Target"}], "4": [{"day": 11, "label": "1", "icon": "Frank"}, {"day": 14, "label": "72", "icon": "Tagbot"}, {"day": 18, "label": "Silver", "icon": "Alie"}, {"day": 21, "label": "Silver", "icon": "Tagbo"}, {"day": 22, "label": "373", "icon": "Fran"}], "5": [{"day": 8, "label": "1", "icon": "Flame"}, {"day": 19, "label": "161", "icon": "Gift"}, {"day": 22, "label": "1", "icon": "News"}, {"day": 26, "label": "Bronze", "icon": "Tricky"}, {"day": 27, "label": "3", "icon": "Fran"}], "6": [{"day": 6, "label": "Gold", "icon": "Award"}, {"day": 15, "label": "Silver", "icon": "Frank"}, {"day": 17, "label": "Silver", "icon": "Zoe"}, {"day": 19, "label": "917", "icon": "Alien"}, {"day": 21, "label": "Silver", "icon": "Locked"}], "7": [{"day": 4, "label": "1", "icon": "News"}, {"day": 7, "label": "Silver", "icon": "Upload"}, {"day": 8, "label": "655", "icon": "Rob"}, {"day": 14, "label": "235", "icon": "Coin"}, {"day": 25, "label": "500", "icon": "Fran"}], "8": [{"day": 2, "label": "499", "icon": "Skateboard"}, {"day": 5, "label": "133", "icon": "Jack"}, {"day": 16, "label": "829", "icon": "News"}, {"day": 18, "label": "846", "icon": "Box"}, {"day": 28, "label": "Silver", "icon": "Yutani"}], "9": [{"day": 4, "label": "4", "icon": "Lucia"}, {"day": 8, "label": "699", "icon": "Tagbo"}, {"day": 10, "label": "5", "icon": "Alien"}, {"day": 27, "label": "Gold", "icon": "Skateboard"}, {"day": 28, "label": "Silver", "icon": "Gift"}], "10": [{"day": 1, "label": "4", "icon": "Tagbot"}, {"day": 6, "label": "4", "icon": "Target"}, {"day": 11, "label": "248", "icon": "Lucia"}, {"day": 12, "label": "458", "icon": "Coin"}, {"day": 22, "label": "Silver", "icon": "Upload"}], "11": [{"day": 13, "label": "1", "icon": "Skateboard"}, {"day": 15, "label": "Bronze", "icon": "Coin"}, {"day": 24, "label": "3", "icon": "Luci"}, {"day": 25, "label": "390", "icon": "Target"}, {"day": 28, "label": "Silver", "icon": "Rob"}], "12": [{"day": 5, "label": "1", "icon": "News"}, {"day": 9, "label": "3", "icon": "Award"}, {"day": 13, "label": "4", "icon": "Gift"}, {"day": 17, "label": "Gold", "icon": "Fresh"}, {"day": 28, "label": "Bronze", "icon": "Frank"}]}, "avatars": [{"label": "Jake"}, {"label": "Tricky"}, {"label": "Robo"}, {"label": "Yutani"}, {"label": "Alien"}, {"label": "Tagbot"}, {"label": "Lucia"}, {"label": "Fresh"}, {"label": "Frank"}, {"label": "Zoe"}, {"label": "King"}, {"label": "Locked", "locked": true}, {"label": "Jack"}, {"label": "Trick"}, {"label": "Rob"}, {"label": "Yutan"}, {"label": "Alie"}, {"label": "Tagbo"}, {"label": "Luci"}, {"label": "Fres"}, {"label": "Fran"}, {"label": "Zo"}, {"label": "Kin"}, {"label": "Lock", "locked": true}], "playlists": {"default": ["A Song of Ice and Fire"], "lord odin": ["Faded", "The Spectre"], "funk": []},
 "events": {
     "interhouse": [
@@ -161,5 +161,250 @@
             "competitions": []
         }
     ]
-}
+},
+"shop": [
+  {
+    "category": "Me",
+    "collections": [
+      {
+        "title": "Recommendations",
+        "subtitle": "Based on what you've purchased so far",
+        "products": [
+          {
+            "name": "VR Headset",
+            "price": "1500 Coins + 2 Tickets",
+            "icon": "World",
+            "category": "Electronics"
+          },
+          {
+            "name": "Sneakers",
+            "price": "900 Coins + 1 Ticket",
+            "icon": "Skateboard",
+            "category": "Fashion"
+          },
+          {
+            "name": "Electric Guitar",
+            "price": "2200 Coins + 3 Tickets",
+            "icon": "Music",
+            "category": "Music"
+          },
+          {
+            "name": "Smart Yoga Mat",
+            "price": "600 Coins + 1 Ticket",
+            "icon": "Flame",
+            "category": "Fitness"
+          },
+          {
+            "name": "Cordless Drill",
+            "price": "1000 Coins + 2 Tickets",
+            "icon": "Tool",
+            "category": "Tools"
+          }
+        ]
+      },
+      {
+        "title": "Reminisce",
+        "subtitle": "Loved our product? You should get another",
+        "products": [
+          {
+            "name": "Hiking Backpack",
+            "price": "800 Coins + 1 Ticket",
+            "icon": "Box",
+            "category": "Outdoor"
+          },
+          {
+            "name": "Baseball Bat",
+            "price": "750 Coins + 1 Ticket",
+            "icon": "Ball",
+            "category": "Sports"
+          },
+          {
+            "name": "Noise Cancelling Headphones",
+            "price": "1800 Coins + 3 Tickets",
+            "icon": "Music",
+            "category": "Electronics"
+          },
+          {
+            "name": "Luxury Watch",
+            "price": "2500 Coins + 5 Tickets",
+            "icon": "Star",
+            "category": "Fashion"
+          },
+          {
+            "name": "Bluetooth Speaker",
+            "price": "1200 Coins + 2 Tickets",
+            "icon": "Music",
+            "category": "Electronics"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Merch",
+    "collections": [
+      {
+        "title": "Clothes",
+        "subtitle": "Be loud and proud for your favorite comp",
+        "products": [
+          {
+            "name": "Champion Hoodie",
+            "price": "1200 Coins + 2 Tickets",
+            "icon": "Tshirt",
+            "category": "Fashion"
+          },
+          {
+            "name": "Limited Edition Sneakers",
+            "price": "2500 Coins + 3 Tickets",
+            "icon": "Skateboard",
+            "category": "Fashion"
+          },
+          {
+            "name": "Retro Baseball Cap",
+            "price": "500 Coins + 1 Ticket",
+            "icon": "Ball",
+            "category": "Fashion"
+          },
+          {
+            "name": "Personalized Water Bottle",
+            "price": "300 Coins + 1 Ticket",
+            "icon": "Box",
+            "category": "Accessories"
+          },
+          {
+            "name": "Stadium Jacket",
+            "price": "2200 Coins + 3 Tickets",
+            "icon": "Shield",
+            "category": "Fashion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Tickets",
+    "collections": [
+      {
+        "title": "Events",
+        "subtitle": "Get tickets for the best events in town",
+        "products": [
+          {
+            "name": "Concert Tickets",
+            "price": "1000 Coins + 2 Tickets",
+            "icon": "Music",
+            "category": "Entertainment"
+          },
+          {
+            "name": "VIP Sports Pass",
+            "price": "3000 Coins + 5 Tickets",
+            "icon": "Ball",
+            "category": "Sports"
+          },
+          {
+            "name": "Theater Show Ticket",
+            "price": "800 Coins + 1 Ticket",
+            "icon": "Rocket",
+            "category": "Entertainment"
+          },
+          {
+            "name": "Comedy Night Tickets",
+            "price": "1200 Coins + 2 Tickets",
+            "icon": "Ghost",
+            "category": "Entertainment"
+          },
+          {
+            "name": "Festival Entry Pass",
+            "price": "1500 Coins + 3 Tickets",
+            "icon": "Music",
+            "category": "Entertainment"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Resources",
+    "collections": [
+      {
+        "title": "Special Gear",
+        "subtitle": "Upgrade your experience with these resources",
+        "products": [
+          {
+            "name": "Energy Drink",
+            "price": "200 Coins + 1 Ticket",
+            "icon": "Flame",
+            "category": "Food"
+          },
+          {
+            "name": "Portable Charger",
+            "price": "600 Coins + 1 Ticket",
+            "icon": "Tool",
+            "category": "Electronics"
+          },
+          {
+            "name": "First Aid Kit",
+            "price": "1000 Coins + 2 Tickets",
+            "icon": "Key",
+            "category": "Health"
+          },
+          {
+            "name": "Luxury Travel Bag",
+            "price": "1800 Coins + 3 Tickets",
+            "icon": "Box",
+            "category": "Accessories"
+          },
+          {
+            "name": "Compact Tent",
+            "price": "1500 Coins + 2 Tickets",
+            "icon": "Box",
+            "category": "Outdoor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Special",
+    "collections": [
+      {
+        "title": "Exclusive Offers",
+        "subtitle": "Limited time offers and special editions",
+        "products": [
+          {
+            "name": "Golden Ticket",
+            "price": "5000 Coins + 10 Tickets",
+            "icon": "Ticket",
+            "category": "Premium"
+          },
+          {
+            "name": "Custom Skateboard Deck",
+            "price": "1200 Coins + 2 Tickets",
+            "icon": "Skateboard",
+            "category": "Special"
+          },
+          {
+            "name": "Platinum Membership",
+            "price": "3000 Coins + 5 Tickets",
+            "icon": "Crown",
+            "category": "Subscription"
+          },
+          {
+            "name": "VIP Concert Package",
+            "price": "5000 Coins + 10 Tickets",
+            "icon": "Rocket",
+            "category": "Entertainment"
+          },
+          {
+            "name": "Limited Edition Hoodie",
+            "price": "2000 Coins + 3 Tickets",
+            "icon": "Tshirt",
+            "category": "Fashion"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+
 }
