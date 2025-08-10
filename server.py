@@ -18,10 +18,11 @@ def get_news(): return jsonify({
     'news': data['news'],
     'avatars': data['avatars'],
     'playlists': data['playlists'],
-    'events': data['events']
+    'events': data['events'],
+    'shop': data['shop']
     })
 
-@app.route("/calendar")
+@app.route("/caleendar")
 def get_schedule():
     month = request.args.get('month', default=str(datetime.datetime.now().month), type=str)
     return jsonify(data['calendar'][month])
