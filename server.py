@@ -22,7 +22,7 @@ def get_news(): return jsonify({
     'shop': data['shop']
     })
 
-@app.route("/caleendar")
+@app.route("/calendar")
 def get_schedule():
     month = request.args.get('month', default=str(datetime.datetime.now().month), type=str)
     return jsonify(data['calendar'][month])
