@@ -56,5 +56,33 @@ def serve_file(filename):
     except FileNotFoundError:
         abort(404)
 
+@app.route('/shop/checkout', methods=['POST'])
+def checkout():
+    allItems = {} 
+    for category in data['shop']:
+        for collection in category['collections']:
+            for product in collection['products']:
+                allItems[product['id']] = product['price']
+
+    cart = []
+    cart = request.get_json()
+    total = {"coin": 0, "ticket": 0}
+    for cartItem in cart:
+        if cartItem['id'] in allItems:
+            total['coin'] += allItems[cartItem['id']].get('coin', 0) * cartItem['qty']
+            total['ticket'] += allItems[cartItem['id']].get('ticket', 0) * cartItem['qty']
+
+    if total['coin'] <= data['user']['coins'] and total['coin'] >= 0: data['user']['coins'] -= total['coin']
+    else: return jsonify({"success": False, "message": "Insufficient Coin Balance"})
+
+    if total['ticket'] <= data['user']['tickets'] and total['ticket'] >= 0: data['user']['tickets'] -= total['ticket']
+    else: return jsonify({"success": False, "message": "Insufficient Ticket Balance"})
+    
+    return jsonify({
+        "success": True,
+        "message": f"""Total Expense => Coin: {total['coin']}, Ticket: {total['ticket']}\n
+                    Remaining Balance => Coin: {data['user']['coins']}, Ticket {data['user']['tickets']}"""
+    })
+
 if __name__ == "__main__":
     app.run(debug=True)
