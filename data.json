@@ -170,22 +170,22 @@
         "title": "Recommendations",
         "subtitle": "Based on what you've purchased so far",
         "products": [
-          { "name": "VR Headset", "description": "Immersive 360° virtual reality experience with crisp visuals.", "price": { "coin": 1500 }, "icon": "World" },
-          { "name": "Sneakers", "description": "Lightweight, stylish sneakers perfect for everyday wear.", "price": { "coin": 900, "ticket": 1 }, "icon": "Skateboard" },
-          { "name": "Electric Guitar", "description": "High-quality electric guitar for rock and jazz enthusiasts.", "price": { "coin": 2200, "ticket": 3 }, "icon": "Music" },
-          { "name": "Smart Yoga Mat", "description": "Yoga mat with built-in posture tracking and guided sessions.", "price": { "ticket": 1 }, "icon": "Flame" },
-          { "name": "Cordless Drill", "description": "Durable cordless drill for home improvement and repairs.", "price": {}, "icon": "Tool" }
+          { "name": "VR Headset", "description": "Immersive 360° virtual reality experience with crisp visuals.", "price": { "coin": 1500 }, "icon": "World", "id": 1 },
+          { "name": "Sneakers", "description": "Lightweight, stylish sneakers perfect for everyday wear.", "price": { "coin": 900, "ticket": 1 }, "icon": "Skateboard", "id": 2 },
+          { "name": "Electric Guitar", "description": "High-quality electric guitar for rock and jazz enthusiasts.", "price": { "coin": 2200, "ticket": 3 }, "icon": "Music", "id": 3 },
+          { "name": "Smart Yoga Mat", "description": "Yoga mat with built-in posture tracking and guided sessions.", "price": { "ticket": 1 }, "icon": "Flame", "id": 4 },
+          { "name": "Cordless Drill", "description": "Durable cordless drill for home improvement and repairs.", "price": {}, "icon": "Tool", "id": 5 }
         ]
       },
       {
         "title": "Reminisce",
         "subtitle": "Loved our product? You should get another",
         "products": [
-          { "name": "Hiking Backpack", "description": "Spacious and weather-resistant backpack for outdoor adventures.", "price": { "coin": 800, "ticket": 1 }, "icon": "Box" },
-          { "name": "Baseball Bat", "description": "Professional-grade bat for baseball games or practice.", "price": { "coin": 750, "ticket": 1 }, "icon": "Ball" },
-          { "name": "Noise Cancelling Headphones", "description": "Block out the world with premium sound and deep bass.", "price": { "coin": 1800, "ticket": 3 }, "icon": "Music" },
-          { "name": "Luxury Watch", "description": "Elegant timepiece with precision engineering and style.", "price": { "coin": 2500, "ticket": 5 }, "icon": "Star" },
-          { "name": "Bluetooth Speaker", "description": "Portable speaker with powerful sound and long battery life.", "price": { "coin": 1200, "ticket": 2 }, "icon": "Music" }
+          { "name": "Hiking Backpack", "description": "Spacious and weather-resistant backpack for outdoor adventures.", "price": { "coin": 800, "ticket": 1 }, "icon": "Box", "id": 6 },
+          { "name": "Baseball Bat", "description": "Professional-grade bat for baseball games or practice.", "price": { "coin": 750, "ticket": 1 }, "icon": "Ball", "id": 7 },
+          { "name": "Noise Cancelling Headphones", "description": "Block out the world with premium sound and deep bass.", "price": { "coin": 1800, "ticket": 3 }, "icon": "Music", "id": 8 },
+          { "name": "Luxury Watch", "description": "Elegant timepiece with precision engineering and style.", "price": { "coin": 2500, "ticket": 5 }, "icon": "Star", "id": 9 },
+          { "name": "Bluetooth Speaker", "description": "Portable speaker with powerful sound and long battery life.", "price": { "coin": 1200, "ticket": 2 }, "icon": "Music", "id": 10 }
         ]
       }
     ]
@@ -197,11 +197,11 @@
         "title": "Clothes",
         "subtitle": "Be loud and proud for your favorite comp",
         "products": [
-          { "name": "Champion Hoodie", "description": "Cozy fleece hoodie with bold championship print.", "price": { "coin": 1200, "ticket": 2 }, "icon": "Tshirt" },
-          { "name": "Limited Edition Sneakers", "description": "Rare sneakers with a one-of-a-kind design.", "price": { "coin": 2500, "ticket": 3 }, "icon": "Skateboard" },
-          { "name": "Retro Baseball Cap", "description": "Classic adjustable cap with vintage logo embroidery.", "price": { "coin": 500, "ticket": 1 }, "icon": "Ball" },
-          { "name": "Personalized Water Bottle", "description": "Reusable bottle with customizable name engraving.", "price": { "coin": 300, "ticket": 1 }, "icon": "Box" },
-          { "name": "Stadium Jacket", "description": "Stylish varsity jacket for game day or casual wear.", "price": { "coin": 2200, "ticket": 3 }, "icon": "Shield" }
+          { "name": "Champion Hoodie", "description": "Cozy fleece hoodie with bold championship print.", "price": { "coin": 1200, "ticket": 2 }, "icon": "Tshirt", "id": 11 },
+          { "name": "Limited Edition Sneakers", "description": "Rare sneakers with a one-of-a-kind design.", "price": { "coin": 2500, "ticket": 3 }, "icon": "Skateboard", "id": 12 },
+          { "name": "Retro Baseball Cap", "description": "Classic adjustable cap with vintage logo embroidery.", "price": { "coin": 500, "ticket": 1 }, "icon": "Ball", "id": 13 },
+          { "name": "Personalized Water Bottle", "description": "Reusable bottle with customizable name engraving.", "price": { "coin": 300, "ticket": 1 }, "icon": "Box", "id": 14 },
+          { "name": "Stadium Jacket", "description": "Stylish varsity jacket for game day or casual wear.", "price": { "coin": 2200, "ticket": 3 }, "icon": "Shield", "id": 15 }
         ]
       }
     ]
@@ -213,11 +213,11 @@
         "title": "Events",
         "subtitle": "Get tickets for the best events in town",
         "products": [
-          { "name": "Concert Tickets", "description": "Access to live performances by your favorite artists.", "price": { "coin": 1000, "ticket": 2 }, "icon": "Music" },
-          { "name": "VIP Sports Pass", "description": "Premium seating and perks at major sporting events.", "price": { "coin": 3000, "ticket": 5 }, "icon": "Ball" },
-          { "name": "Theater Show Ticket", "description": "Enjoy a night of drama, comedy, or musicals.", "price": { "coin": 800, "ticket": 1 }, "icon": "Rocket" },
-          { "name": "Comedy Night Tickets", "description": "Laugh the night away with top comedians.", "price": { "coin": 1200, "ticket": 2 }, "icon": "Ghost" },
-          { "name": "Festival Entry Pass", "description": "Join the festivities with live music and food stalls.", "price": { "coin": 1500, "ticket": 3 }, "icon": "Music" }
+          { "name": "Concert Tickets", "description": "Access to live performances by your favorite artists.", "price": { "coin": 1000, "ticket": 2 }, "icon": "Music", "id": 16 },
+          { "name": "VIP Sports Pass", "description": "Premium seating and perks at major sporting events.", "price": { "coin": 3000, "ticket": 5 }, "icon": "Ball", "id": 17 },
+          { "name": "Theater Show Ticket", "description": "Enjoy a night of drama, comedy, or musicals.", "price": { "coin": 800, "ticket": 1 }, "icon": "Rocket", "id": 18 },
+          { "name": "Comedy Night Tickets", "description": "Laugh the night away with top comedians.", "price": { "coin": 1200, "ticket": 2 }, "icon": "Ghost", "id": 19 },
+          { "name": "Festival Entry Pass", "description": "Join the festivities with live music and food stalls.", "price": { "coin": 1500, "ticket": 3 }, "icon": "Music", "id": 20 }
         ]
       }
     ]
@@ -229,11 +229,11 @@
         "title": "Special Gear",
         "subtitle": "Upgrade your experience with these resources",
         "products": [
-          { "name": "Energy Drink", "description": "Boost your stamina with this refreshing drink.", "price": { "coin": 200, "ticket": 1 }, "icon": "Flame" },
-          { "name": "Portable Charger", "description": "Keep devices powered on the go.", "price": { "coin": 600, "ticket": 1 }, "icon": "Tool" },
-          { "name": "First Aid Kit", "description": "Compact kit for handling minor injuries.", "price": { "coin": 1000, "ticket": 2 }, "icon": "Key" },
-          { "name": "Luxury Travel Bag", "description": "Stylish bag with ample storage for travel.", "price": { "coin": 1800, "ticket": 3 }, "icon": "Box" },
-          { "name": "Compact Tent", "description": "Lightweight tent for camping trips.", "price": { "coin": 1500, "ticket": 2 }, "icon": "Box" }
+          { "name": "Energy Drink", "description": "Boost your stamina with this refreshing drink.", "price": { "coin": 200, "ticket": 1 }, "icon": "Flame", "id": 21 },
+          { "name": "Portable Charger", "description": "Keep devices powered on the go.", "price": { "coin": 600, "ticket": 1 }, "icon": "Tool", "id": 22 },
+          { "name": "First Aid Kit", "description": "Compact kit for handling minor injuries.", "price": { "coin": 1000, "ticket": 2 }, "icon": "Key", "id": 23 },
+          { "name": "Luxury Travel Bag", "description": "Stylish bag with ample storage for travel.", "price": { "coin": 1800, "ticket": 3 }, "icon": "Box", "id": 24 },
+          { "name": "Compact Tent", "description": "Lightweight tent for camping trips.", "price": { "coin": 1500, "ticket": 2 }, "icon": "Box", "id": 25 }
         ]
       }
     ]
@@ -245,11 +245,11 @@
         "title": "Exclusive Offers",
         "subtitle": "Limited time offers and special editions",
         "products": [
-          { "name": "Golden Ticket", "description": "Unlocks the ultimate premium perks and rewards.", "price": {}, "icon": "Ticket" },
-          { "name": "Custom Skateboard Deck", "description": "Personalized design for your skateboard deck.", "price": { "coin": 1200, "ticket": 2 }, "icon": "Skateboard" },
-          { "name": "Platinum Membership", "description": "Top-tier membership with exclusive benefits.", "price": { "coin": 3000, "ticket": 5 }, "icon": "Crown" },
-          { "name": "VIP Concert Package", "description": "Meet-and-greet, front-row seats, and more.", "price": { "coin": 5000, "ticket": 10 }, "icon": "Rocket" },
-          { "name": "Limited Edition Hoodie", "description": "Rare hoodie with limited production run.", "price": { "coin": 2000, "ticket": 3 }, "icon": "Tshirt" }
+          { "name": "Golden Ticket", "description": "Unlocks the ultimate premium perks and rewards.", "price": {}, "icon": "Ticket", "id": 26 },
+          { "name": "Custom Skateboard Deck", "description": "Personalized design for your skateboard deck.", "price": { "coin": 1200, "ticket": 2 }, "icon": "Skateboard", "id": 27 },
+          { "name": "Platinum Membership", "description": "Top-tier membership with exclusive benefits.", "price": { "coin": 3000, "ticket": 5 }, "icon": "Crown", "id": 28 },
+          { "name": "VIP Concert Package", "description": "Meet-and-greet, front-row seats, and more.", "price": { "coin": 5000, "ticket": 10 }, "icon": "Rocket", "id": 29 },
+          { "name": "Limited Edition Hoodie", "description": "Rare hoodie with limited production run.", "price": { "coin": 2000, "ticket": 3 }, "icon": "Tshirt", "id": 30 }
         ]
       }
     ]
@@ -261,11 +261,11 @@
         "title": "Tech Essentials",
         "subtitle": "Stay ahead with the latest gadgets",
         "products": [
-          { "name": "Smart Glasses", "description": "Augmented reality glasses with voice control.", "price": { "coin": 2500 }, "icon": "Headset" },
-          { "name": "Drone Camera", "description": "Capture stunning aerial shots effortlessly.", "price": { "coin": 3000, "ticket": 4 }, "icon": "Rocket" },
-          { "name": "Smart Home Hub", "description": "Control all your smart devices from one place.", "price": { "coin": 1200 }, "icon": "Home" },
-          { "name": "Gaming Keyboard", "description": "RGB mechanical keyboard with programmable keys.", "price": { "coin": 800 }, "icon": "Tool" },
-          { "name": "VR Gloves", "description": "Haptic feedback gloves for immersive VR interaction.", "price": { "coin": 2000 }, "icon": "World" }
+          { "name": "Smart Glasses", "description": "Augmented reality glasses with voice control.", "price": { "coin": 2500 }, "icon": "Headset", "id": 31 },
+          { "name": "Drone Camera", "description": "Capture stunning aerial shots effortlessly.", "price": { "coin": 3000, "ticket": 4 }, "icon": "Rocket", "id": 32 },
+          { "name": "Smart Home Hub", "description": "Control all your smart devices from one place.", "price": { "coin": 1200 }, "icon": "Home", "id": 33 },
+          { "name": "Gaming Keyboard", "description": "RGB mechanical keyboard with programmable keys.", "price": { "coin": 800 }, "icon": "Tool", "id": 34 },
+          { "name": "VR Gloves", "description": "Haptic feedback gloves for immersive VR interaction.", "price": { "coin": 2000 }, "icon": "World", "id": 35 }
         ]
       }
     ]
@@ -277,16 +277,17 @@
         "title": "Rare Finds",
         "subtitle": "Own a piece of history or pop culture",
         "products": [
-          { "name": "Signed Movie Poster", "description": "Autographed by the entire cast.", "price": { "coin": 4000, "ticket": 8 }, "icon": "Award" },
-          { "name": "Vintage Comic Book", "description": "First edition in pristine condition.", "price": { "coin": 3500 }, "icon": "Pencil" },
-          { "name": "Action Figure Set", "description": "Limited edition collectible figures.", "price": { "coin": 2500 }, "icon": "Horse" },
-          { "name": "Antique Medal", "description": "Historical medal with unique engraving.", "price": { "coin": 3000 }, "icon": "Ankh" },
-          { "name": "Crystal Trophy", "description": "Elegant trophy for display.", "price": { "coin": 1800 }, "icon": "Award" }
+          { "name": "Signed Movie Poster", "description": "Autographed by the entire cast.", "price": { "coin": 4000, "ticket": 8 }, "icon": "Award", "id": 36 },
+          { "name": "Vintage Comic Book", "description": "First edition in pristine condition.", "price": { "coin": 3500 }, "icon": "Pencil", "id": 37 },
+          { "name": "Action Figure Set", "description": "Limited edition collectible figures.", "price": { "coin": 2500 }, "icon": "Horse", "id": 38 },
+          { "name": "Antique Medal", "description": "Historical medal with unique engraving.", "price": { "coin": 3000 }, "icon": "Ankh", "id": 39 },
+          { "name": "Crystal Trophy", "description": "Elegant trophy for display.", "price": { "coin": 1800 }, "icon": "Award", "id": 40 }
         ]
       }
     ]
   }
 ]
+
 
 
 
