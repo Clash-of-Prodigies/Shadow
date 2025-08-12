@@ -18,8 +18,7 @@ def get_news(): return jsonify({
     'news': data['news'],
     'avatars': data['avatars'],
     'playlists': data['playlists'],
-    'events': data['events'],
-    'shop': data['shop']
+    'events': data['events']
     })
 
 @app.route("/calendar")
@@ -56,6 +55,10 @@ def serve_file(filename):
     except FileNotFoundError:
         abort(404)
 
+@app.route('/shop/items', methods=['GET'])
+def showcase():
+    return jsonify(data['shop'])
+
 @app.route('/shop/checkout', methods=['POST'])
 def checkout():
     allItems = {} 
@@ -77,7 +80,7 @@ def checkout():
 
     if total['ticket'] <= data['user']['tickets'] and total['ticket'] >= 0: data['user']['tickets'] -= total['ticket']
     else: return jsonify({"success": False, "message": "Insufficient Ticket Balance"})
-    
+
     return jsonify({
         "success": True,
         "message": f"""Total Expense => Coin: {total['coin']}, Ticket: {total['ticket']}\n
