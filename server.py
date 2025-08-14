@@ -12,10 +12,13 @@ with open(file_path, "r") as f: data: dict = json.load(f)
 
 @app.route("/data")
 def get_data(): return jsonify({'info': data['user']})
-    
+
+@app.route("/news", methods=['GET'])
+def newscaster():
+    return jsonify({'news': data['news']})
+
 @app.route("/broadcast")
-def get_news(): return jsonify({
-    'news': data['news'],
+def broadcast(): return jsonify({
     'avatars': data['avatars'],
     'playlists': data['playlists'],
     'events': data['events']
