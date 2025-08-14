@@ -15,7 +15,7 @@ def get_data(): return jsonify({'info': data['user']})
 
 @app.route("/news", methods=['GET'])
 def newscaster():
-    return jsonify({'news': data['news']})
+    return jsonify(data['news'])
 
 @app.route("/broadcast")
 def broadcast(): return jsonify({
