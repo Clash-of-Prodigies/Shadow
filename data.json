@@ -108,7 +108,7 @@
     "away": { "name": "Inter", "logo": "Pulse", "theme": "indigo" },
     "datetime": "2025-08-08T18:30:00Z",
     "round": "Gameweek 1",
-    "score": [],
+    "score": [0, 0],
     "live": true,
     "highlights": [
       { "type": "Ycard", "name": "Tonali", "time": "33" }
