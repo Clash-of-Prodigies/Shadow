@@ -3,11 +3,9 @@ from flask_cors import CORS
 import json
 import os
 import datetime
-from flask_socketio import SocketIO, send, emit, join_room, leave_room
 
 app = Flask(__name__)
 CORS(app)
-socketio = SocketIO(app, cors_allowed_origins="*")
 
 file_path = os.path.join("Shadow", "data.json")
 with open(file_path, "r") as f: data: dict = json.load(f)
@@ -92,10 +90,11 @@ def checkout():
                     Remaining Balance => Coin: {data['user']['coins']}, Ticket {data['user']['tickets']}"""
     })
 
-@socketio.on("message")
-def handle_message(msg):
-    print("message:", msg)
-    send(f"echo: {msg}")  # sends to the sender
+@app.route("/lobby")
+def enter_lobby():
+    id = request.args.get('month', default='', type=str)
+    if not id: return jsonify({})
+    return jsonify(data['calendar'][id])
 
 if __name__ == "__main__":
-    socketio.run(app, host="localhost", port=5000)
+    app.run(debug=True)
