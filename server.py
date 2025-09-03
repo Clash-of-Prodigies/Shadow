@@ -90,11 +90,5 @@ def checkout():
                     Remaining Balance => Coin: {data['user']['coins']}, Ticket {data['user']['tickets']}"""
     })
 
-@app.route("/lobby")
-def enter_lobby():
-    id = request.args.get('month', default='', type=str)
-    if not id: return jsonify({})
-    return jsonify(data['calendar'][id])
-
 if __name__ == "__main__":
     app.run(debug=True)
