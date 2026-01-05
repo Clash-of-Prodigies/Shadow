@@ -12,33 +12,37 @@ logging.basicConfig(
 )
 ALLOWED_ROOTS = ["clash-of-prodigies.github.io", "app.clashofprodigies.org"]
 AUTH_SERVICE_URL = "http://Cerberus:5000/introspect"
-
-def protected(f):
-    @wraps(f)
-    def wrapped(*args, **kwargs):
-        fake_resp: Response = Response()
-        try:
-            pandora.introspect_with_cerberus(AUTH_SERVICE_URL, request=request)
-            fake_resp = add_cors_headers(Response())
-            fake_resp.headers["Access-Control-Allow-Origin"] = request.headers.get("Origin", "")
-        except ValueError as ve:
-            return jsonify({'message': str(ve), 'redirect': 'https://auth.clashofprodigies.org/'}), 401, fake_resp.headers
-        except Exception as e:
-            logging.error(f"Error in authentication: {e}")
-            return jsonify({'message': 'Authentication service error'}), 500, fake_resp.headers
-        return f(*args, **kwargs)
-    return wrapped
+AUTH_PAGE_URL = "https://auth.clashofprodigies.org/"
+standard_headers = {
+    "Access-Control-Allow-Credentials": "true",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization, ngrok-skip-browser-warning",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, DELETE",
+    "Vary": "Origin",
+}
 
 @app.after_request
 def add_cors_headers(response: Response):
     origin = request.headers.get("Origin")
     if origin and pandora.is_allowed_origin(origin, ALLOWED_ROOTS):
         response.headers["Access-Control-Allow-Origin"] = origin
-        response.headers["Vary"] = "Origin"
-        response.headers["Access-Control-Allow-Credentials"] = "true"
-        response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization, ngrok-skip-browser-warning"
-        response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS, PUT, DELETE"
+        response.headers.update(standard_headers)
     return response
+
+def protected(f):
+    @wraps(f)
+    def wrapped(*args, **kwargs):
+        headers = {"Access-Control-Allow-Origin": request.headers.get("Origin", "")}
+        headers.update(standard_headers)
+        try:
+            pandora.introspect_with_cerberus(AUTH_SERVICE_URL, request=request)
+        except ValueError as ve:
+            return jsonify({'message': str(ve), 'redirect': AUTH_PAGE_URL}), 401, headers
+        except Exception as e:
+            logging.error(f"Error in authentication: {e}")
+            return jsonify({'message': 'Authentication service error'}), 500, headers
+        return f(*args, **kwargs)
+    return wrapped
+
 
 with open("data.json", "r") as f: data: dict = json.load(f)
 
