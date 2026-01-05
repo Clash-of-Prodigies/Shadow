@@ -1,22 +1,32 @@
 from flask import Flask, jsonify, request, send_from_directory, abort
-from flask_cors import CORS
+from urllib.parse import urlparse
 import json
 import datetime
 
 app = Flask(__name__)
-CORS(app, origins=["https://clash-of-prodigies.github.io", "https://app.clashofprodigies.org"], supports_credentials=True)
-app.config.update(
-    SESSION_COOKIE_SAMESITE='None',
-    SESSION_COOKIE_SECURE=True
-)
+ALLOWED_ROOTS = ["clash-of-prodigies.github.io", "app.clashofprodigies.org"]
+
+def is_allowed_origin(origin: str) -> bool:
+    if not origin:
+        return False
+    parsed = urlparse(origin)
+    host = parsed.hostname
+    if not host:
+        return False
+    return any(host == root for root in ALLOWED_ROOTS)
+
+@app.after_request
+def add_cors_headers(response):
+    origin = request.headers.get("Origin")
+    if origin and is_allowed_origin(origin):
+        response.headers["Access-Control-Allow-Origin"] = origin
+        response.headers["Vary"] = "Origin"
+        response.headers["Access-Control-Allow-Credentials"] = "true"
+        response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+        response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS, PUT, DELETE"
+    return response
 
 with open("data.json", "r") as f: data: dict = json.load(f)
-
-@app.before_request
-def before():
-    print(f"Received {request.method} request for {request.url}")
-    if request.method == "OPTIONS":
-        return "", 204
 
 @app.route("/data")
 def get_data(): return jsonify({'info': data['user']})
