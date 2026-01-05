@@ -16,6 +16,7 @@ AUTH_SERVICE_URL = "http://Cerberus:5000/introspect"
 def protected(f):
     @wraps(f)
     def wrapped(*args, **kwargs):
+        fake_resp: Response = Response()
         try:
             pandora.introspect_with_cerberus(AUTH_SERVICE_URL, request=request)
             fake_resp = add_cors_headers(Response())
