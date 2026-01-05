@@ -5,6 +5,10 @@ import datetime
 
 app = Flask(__name__)
 CORS(app, origins=["https://clash-of-prodigies.github.io", "https://app.clashofprodigies.org"], supports_credentials=True)
+app.config.update(
+    SESSION_COOKIE_SAMESITE='None',
+    SESSION_COOKIE_SECURE=True
+)
 
 with open("data.json", "r") as f: data: dict = json.load(f)
 
