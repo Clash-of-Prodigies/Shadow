@@ -18,4 +18,4 @@ def introspect_with_cerberus(AUTH_SERVICE_URL: str, request: Request) -> None:
             raise ValueError("Missing token")
     res = requests.get(AUTH_SERVICE_URL)
     if res.status_code != 204:
-        raise ValueError("Invalid token")
+        raise ValueError("Unauthenticated")
