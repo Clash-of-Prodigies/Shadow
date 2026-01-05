@@ -17,7 +17,7 @@ def before():
 @app.route("/data")
 def get_data(): return jsonify({'info': data['user']})
 
-@app.route("/news", methods=['GET'])
+@app.route("/news")
 def newscaster():
     return jsonify(data['news'])
 
@@ -33,8 +33,10 @@ def get_schedule():
     month = request.args.get('month', default=str(datetime.datetime.now().month), type=str)
     return jsonify(data['calendar'][month])
 
-@app.route("/update", methods=["POST"])
+@app.route("/update", methods=["POST", "OPTIONS"])
 def update_details():
+    if request.method == "OPTIONS":
+        return "", 204
     global data, file_path
     user_data = request.get_json()
     print(user_data)
@@ -62,12 +64,14 @@ def serve_file(filename):
     except FileNotFoundError:
         abort(404)
 
-@app.route('/shop/items', methods=['GET'])
+@app.route('/shop/items')
 def showcase():
     return jsonify(data['shop'])
 
-@app.route('/shop/checkout', methods=['POST'])
+@app.route('/shop/checkout', methods=['POST', 'OPTIONS'])
 def checkout():
+    if request.method == "OPTIONS":
+        return "", 204
     allItems = {} 
     for category in data['shop']:
         for collection in category['collections']:
