@@ -4,11 +4,6 @@ import json
 import os
 import datetime
 
-CERB_URL = os.getenv("CERBERUS_URL", "http://cerberus:5000")
-SERVICE_TOKEN = os.getenv("SERVICE_TOKEN", "change-me")
-INTROSPECT = f"{CERB_URL}/introspect"
-INTROSPECT_TIMEOUT = float(os.getenv("INTROSPECT_TIMEOUT", "0.6"))
-
 app = Flask(__name__)
 CORS(app)
 
