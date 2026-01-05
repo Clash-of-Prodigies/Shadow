@@ -22,7 +22,7 @@ def protected(f):
             fake_resp = add_cors_headers(Response())
             fake_resp.headers["Access-Control-Allow-Origin"] = request.headers.get("Origin", "")
         except ValueError as ve:
-            return jsonify({'message': str(ve), 'redirect': 'auth.clashofprodigies.org'}), 401, fake_resp.headers
+            return jsonify({'message': str(ve), 'redirect': 'https://auth.clashofprodigies.org/'}), 401, fake_resp.headers
         except Exception as e:
             logging.error(f"Error in authentication: {e}")
             return jsonify({'message': 'Authentication service error'}), 500, fake_resp.headers
