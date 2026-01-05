@@ -18,6 +18,8 @@ with open(file_path, "r") as f: data: dict = json.load(f)
 @app.before_request
 def before():
     print(f"Received {request.method} request for {request.url}")
+    if request.method == "OPTIONS":
+        return "", 204
 
 @app.route("/data")
 def get_data(): return jsonify({'info': data['user']})
