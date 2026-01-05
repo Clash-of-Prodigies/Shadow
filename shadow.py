@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, send_from_directory, abort
+from flask import Flask, jsonify, request, send_from_directory, abort, Response
 from functools import wraps
 import json
 import datetime
@@ -18,16 +18,18 @@ def protected(f):
     def wrapped(*args, **kwargs):
         try:
             pandora.introspect_with_cerberus(AUTH_SERVICE_URL, request=request)
+            fake_resp = add_cors_headers(Response())
+            fake_resp.headers["Access-Control-Allow-Origin"] = request.headers.get("Origin", "")
         except ValueError as ve:
-            return jsonify({'message': str(ve), 'redirect': 'auth.clashofprodigies.org'}), 401
+            return jsonify({'message': str(ve), 'redirect': 'auth.clashofprodigies.org'}), 401, fake_resp.headers
         except Exception as e:
             logging.error(f"Error in authentication: {e}")
-            return jsonify({'message': 'Authentication service error'}), 500
+            return jsonify({'message': 'Authentication service error'}), 500, fake_resp.headers
         return f(*args, **kwargs)
     return wrapped
 
 @app.after_request
-def add_cors_headers(response):
+def add_cors_headers(response: Response):
     origin = request.headers.get("Origin")
     if origin and pandora.is_allowed_origin(origin, ALLOWED_ROOTS):
         response.headers["Access-Control-Allow-Origin"] = origin
