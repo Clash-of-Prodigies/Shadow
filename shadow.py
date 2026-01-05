@@ -34,10 +34,9 @@ def add_cors_headers(response: Response):
     origin = request.headers.get("Origin")
     if origin and pandora.is_allowed_origin(origin, ALLOWED_ROOTS):
         response.headers["Access-Control-Allow-Origin"] = origin
-        response.headers["ngrok-skip-browser-warning"] = "true"
         response.headers["Vary"] = "Origin"
         response.headers["Access-Control-Allow-Credentials"] = "true"
-        response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+        response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization, ngrok-skip-browser-warning"
         response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS, PUT, DELETE"
     return response
 
