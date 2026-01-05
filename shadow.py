@@ -4,7 +4,7 @@ import json
 import datetime
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://clash-of-prodigies.github.io", "https://app.clashofprodigies.org"], supports_credentials=True)
 
 with open("data.json", "r") as f: data: dict = json.load(f)
 
