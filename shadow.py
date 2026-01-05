@@ -1,24 +1,35 @@
 from flask import Flask, jsonify, request, send_from_directory, abort
-from urllib.parse import urlparse
+from functools import wraps
 import json
 import datetime
+import logging
+import pandora
 
 app = Flask(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
 ALLOWED_ROOTS = ["clash-of-prodigies.github.io", "app.clashofprodigies.org"]
+AUTH_SERVICE_URL = "http://Cerberus:5000/introspect"
 
-def is_allowed_origin(origin: str) -> bool:
-    if not origin:
-        return False
-    parsed = urlparse(origin)
-    host = parsed.hostname
-    if not host:
-        return False
-    return any(host == root for root in ALLOWED_ROOTS)
+def protected(f):
+    @wraps(f)
+    def wrapped(*args, **kwargs):
+        try:
+            pandora.introspect_with_cerberus(AUTH_SERVICE_URL, request=request)
+        except ValueError as ve:
+            return jsonify({'message': str(ve), 'redirect': 'auth.clashofprodigies.org'}), 401
+        except Exception as e:
+            logging.error(f"Error in authentication: {e}")
+            return jsonify({'message': 'Authentication service error'}), 500
+        return f(*args, **kwargs)
+    return wrapped
 
 @app.after_request
 def add_cors_headers(response):
     origin = request.headers.get("Origin")
-    if origin and is_allowed_origin(origin):
+    if origin and pandora.is_allowed_origin(origin, ALLOWED_ROOTS):
         response.headers["Access-Control-Allow-Origin"] = origin
         response.headers["Vary"] = "Origin"
         response.headers["Access-Control-Allow-Credentials"] = "true"
@@ -29,6 +40,7 @@ def add_cors_headers(response):
 with open("data.json", "r") as f: data: dict = json.load(f)
 
 @app.route("/data")
+@protected
 def get_data(): return jsonify({'info': data['user']})
 
 @app.route("/news")
@@ -48,6 +60,7 @@ def get_schedule():
     return jsonify(data['calendar'][month])
 
 @app.route("/update", methods=["POST", "OPTIONS"])
+@protected
 def update_details():
     if request.method == "OPTIONS":
         return "", 204
