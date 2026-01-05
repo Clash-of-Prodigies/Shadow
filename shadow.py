@@ -1,14 +1,12 @@
 from flask import Flask, jsonify, request, send_from_directory, abort
 from flask_cors import CORS
 import json
-import os
 import datetime
 
 app = Flask(__name__)
 CORS(app)
 
-file_path = os.path.join("Shadow", "data.json")
-with open(file_path, "r") as f: data: dict = json.load(f)
+with open("data.json", "r") as f: data: dict = json.load(f)
 
 @app.before_request
 def before():
@@ -52,7 +50,7 @@ def update_details():
 
     if updated_user != original_user:
         data['user'] = updated_user
-        with open(file_path, "w") as f:
+        with open("data.json", "w") as f:
             f.write(json.dumps(data))
 
     return jsonify({})
