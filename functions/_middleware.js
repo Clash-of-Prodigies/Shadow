@@ -1,5 +1,6 @@
 const ALLOWED_ORIGINS = new Set([
   "https://auth.clashofprodigies.org",
+  "https://app.clashofprodigies.org",
 ]);
 
 export async function onRequest(context) {
