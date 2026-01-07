@@ -16,6 +16,6 @@ def introspect_with_cerberus(AUTH_SERVICE_URL: str, request: Request) -> None:
     if not auth_header or not auth_header.lower().startswith('bearer '):
         if not 'jwt' in request.cookies:
             raise ValueError("Missing token")
-    res = requests.get(AUTH_SERVICE_URL)
+    res = requests.get(AUTH_SERVICE_URL, headers={"Authorization": request.cookies.get("jwt")})
     if res.status_code != 204:
         raise ValueError("Unauthenticated")
