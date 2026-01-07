@@ -18,32 +18,28 @@ export async function onRequest(context) {
 
     const reqHeaders = req.headers.get("Access-Control-Request-Headers") || "content-type";
     const h = new Headers();
-
     h.set("Access-Control-Allow-Origin", origin);
     h.set("Access-Control-Allow-Credentials", "true");
     h.set("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS");
     h.set("Access-Control-Allow-Headers", reqHeaders);
     h.set("Access-Control-Max-Age", "86400");
     h.set("Vary", "Origin, Access-Control-Request-Method, Access-Control-Request-Headers");
-    h.set("X-CORS-Preflight", "1");
-
     return new Response(null, { status: 204, headers: h });
   }
 
   const resp = await context.next();
 
-  if (originAllowed) {
-    const headers = new Headers(resp.headers);
-    headers.set("Access-Control-Allow-Origin", origin);
-    headers.set("Access-Control-Allow-Credentials", "true");
-    headers.set("Vary", "Origin");
+  // Add CORS to actual response too
+  if (!originAllowed) return resp;
 
-    return new Response(resp.body, {
-      status: resp.status,
-      statusText: resp.statusText,
-      headers,
-    });
-  }
+  const headers = new Headers(resp.headers);
+  headers.set("Access-Control-Allow-Origin", origin);
+  headers.set("Access-Control-Allow-Credentials", "true");
+  headers.set("Vary", "Origin");
 
-  return resp;
+  return new Response(resp.body, {
+    status: resp.status,
+    statusText: resp.statusText,
+    headers,
+  });
 }
