@@ -13,11 +13,16 @@ def is_allowed_origin(origin: str, ALLOWED_ROOTS: list[str]) -> bool:
 
 def introspect_with_cerberus(AUTH_SERVICE_URL: str, request: Request) -> None:
     auth_header = request.headers.get('Authorization')
-    if not auth_header or not auth_header.lower().startswith('bearer '):
-        if not 'jwt' in request.cookies:
-            raise ValueError("Missing token")
+    token = ''
+    if auth_header and auth_header.lower().startswith('bearer '):
+        token = auth_header.split(' ', 1)[1].strip()
+    if not token and 'jwt' in request.cookies:
+        token = request.cookies.get('jwt', '')
+    if not token:
+        raise ValueError("Missing token")
     res = requests.get(AUTH_SERVICE_URL, headers={
-        "Authorization": f"Bearer: {request.cookies.get('jwt')}"
-        })
+        **request.headers,
+        "Authorization": f"Bearer {token}",
+    })
     if res.status_code != 204:
         raise ValueError("Unauthenticated")
