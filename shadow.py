@@ -34,7 +34,6 @@ def protected(f):
         headers = {"Access-Control-Allow-Origin": request.headers.get("Origin", "")}
         headers.update(standard_headers)
         try:
-            logging.info("Cookies: %s", request.cookies)
             pandora.introspect_with_cerberus(AUTH_SERVICE_URL, request=request)
         except ValueError as ve:
             return jsonify({'message': str(ve), 'redirect': AUTH_PAGE_URL}), 401, headers
