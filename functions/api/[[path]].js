@@ -1,38 +1,17 @@
-export async function onRequest({ request, params }) {
+const ALLOWED_ORIGINS = new Set([
+  "https://auth.clashofprodigies.org",
+  // add others as needed
+]);
+
+export const onRequestOptions = async ({ request }) => {
+  return handlePreflight(request);
+};
+
+export const onRequest = async ({ request, params }) => {
+  // Handle CORS preflight if it ever reaches here as OPTIONS
+  if (request.method === "OPTIONS") return handlePreflight(request);
+
   const incomingUrl = new URL(request.url);
-
-  const ALLOWED_ORIGINS = new Set([
-    "https://auth.clashofprodigies.org",
-    "https://app.clashofprodigies.org",
-  ]);
-
-  const origin = request.headers.get("Origin") || "";
-  const originAllowed = origin && ALLOWED_ORIGINS.has(origin);
-
-  const allowMethods = "GET,POST,PUT,PATCH,DELETE,OPTIONS";
-  const requestedHeaders = request.headers.get("Access-Control-Request-Headers");
-  const allowHeaders = requestedHeaders || "authorization,content-type";
-
-  const isPreflight =
-    request.method === "OPTIONS" &&
-    request.headers.has("Origin") &&
-    request.headers.has("Access-Control-Request-Method");
-
-  // ---------- Preflight handled at the worker ----------
-  if (isPreflight) {
-    // If the Origin is not allowed, fail fast (browser will block anyway).
-    if (!originAllowed) return new Response(null, { status: 403 });
-
-    const h = new Headers();
-    h.set("Access-Control-Allow-Origin", origin);
-    h.set("Access-Control-Allow-Credentials", "true");
-    h.set("Access-Control-Allow-Methods", allowMethods);
-    h.set("Access-Control-Allow-Headers", allowHeaders);
-    h.set("Access-Control-Max-Age", "86400");
-    h.set("Vary", "Origin, Access-Control-Request-Method, Access-Control-Request-Headers");
-
-    return new Response(null, { status: 204, headers: h });
-  }
 
   const pathParts = Array.isArray(params.path)
     ? params.path
@@ -56,20 +35,41 @@ export async function onRequest({ request, params }) {
     redirect: "manual",
   });
 
-  // ---------- Add CORS headers to actual response ----------
+  // Add CORS to the actual response too
   const respHeaders = new Headers(upstreamResp.headers);
-
-  if (originAllowed) {
-    respHeaders.set("Access-Control-Allow-Origin", origin);
-    respHeaders.set("Access-Control-Allow-Credentials", "true");
-    respHeaders.set("Vary", "Origin");
-  }
+  applyCorsToResponse(request, respHeaders);
 
   return new Response(upstreamResp.body, {
     status: upstreamResp.status,
     statusText: upstreamResp.statusText,
     headers: respHeaders,
   });
+};
+
+function handlePreflight(request) {
+  const origin = request.headers.get("Origin") || "";
+  if (!ALLOWED_ORIGINS.has(origin)) return new Response(null, { status: 403 });
+
+  const reqHeaders = request.headers.get("Access-Control-Request-Headers") || "content-type";
+  const h = new Headers();
+  h.set("Access-Control-Allow-Origin", origin);
+  h.set("Access-Control-Allow-Credentials", "true");
+  h.set("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS");
+  h.set("Access-Control-Allow-Headers", reqHeaders);
+  h.set("Access-Control-Max-Age", "86400");
+  h.set("Vary", "Origin, Access-Control-Request-Method, Access-Control-Request-Headers");
+  h.set("X-CORS-Preflight", "1"); // debug marker so you can confirm it is your code
+
+  return new Response(null, { status: 204, headers: h });
+}
+
+function applyCorsToResponse(request, respHeaders) {
+  const origin = request.headers.get("Origin") || "";
+  if (!ALLOWED_ORIGINS.has(origin)) return;
+
+  respHeaders.set("Access-Control-Allow-Origin", origin);
+  respHeaders.set("Access-Control-Allow-Credentials", "true");
+  respHeaders.set("Vary", "Origin");
 }
 
 function getCookie(cookieHeader, name) {
